@@ -81,11 +81,10 @@
           <p>Please provide us following details...</p>
         </div>
         <form id="address-form" action="" method="get" autocomplete="off">
-          <p class="title">Sample address form for North America</p>
           <p class="note"><em>* = required field</em></p>
           <label class="full-field">
             <!-- Avoid the word "address" in id, name, or label text to avoid browser autofill from conflicting with Place Autocomplete. Star or comment bug https://crbug.com/587466 to request Chromium to honor autocomplete="off" attribute. -->
-            <span class="form-label">Deliver to*</span>
+            <span class="form-label">Area*</span>
             <input
               id="ship-address"
               name="ship-address"
@@ -113,7 +112,7 @@
             <span class="form-label">Country/Region*</span>
             <input id="country" name="country" required />
           </label>
-          <button type="button" class="my-button">Save address</button>
+          <button type="button" class="my-button"> Submit </button>
     
           <!-- Reset button provided for development testing convenience.
       Not recommended for user-facing forms due to risk of mis-click when aiming for Submit button. -->
