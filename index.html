@@ -80,44 +80,51 @@
             <h2>Vendor Form</h2>
           <p>Please provide us following details...</p>
         </div>
-        <form id="address-form" action="" method="get" autocomplete="off">
-          <p class="note"><em>* = required field</em></p>
-          <label class="full-field">
-            <!-- Avoid the word "address" in id, name, or label text to avoid browser autofill from conflicting with Place Autocomplete. Star or comment bug https://crbug.com/587466 to request Chromium to honor autocomplete="off" attribute. -->
-            <span class="form-label">Area*</span>
-            <input
-              id="ship-address"
-              name="ship-address"
-              required
-              autocomplete="off"
-            />
-          </label>
-          <label class="full-field">
-            <span class="form-label">Apartment, unit, suite, or floor #</span>
-            <input id="address2" name="address2" />
-          </label>
-          <label class="full-field">
-            <span class="form-label">City*</span>
-            <input id="locality" name="locality" required />
-          </label>
-          <label class="slim-field-left">
-            <span class="form-label">State/Province*</span>
-            <input id="state" name="state" required />
-          </label>
-          <label class="slim-field-right" for="postal_code">
-            <span class="form-label">Postal code*</span>
-            <input id="postcode" name="postcode" required />
-          </label>
-          <label class="full-field">
-            <span class="form-label">Country/Region*</span>
-            <input id="country" name="country" required />
-          </label>
-          <button type="button" class="my-button"> Submit </button>
-    
-          <!-- Reset button provided for development testing convenience.
-      Not recommended for user-facing forms due to risk of mis-click when aiming for Submit button. -->
-          <input type="reset" value="Clear form" />
-        </form>
+        <div class="container">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Address</h3>
+            </div>
+            <div class="panel-body">
+             <input id="autocomplete" placeholder="Enter your address"
+                onFocus="geolocate()" type="text" class="form-control">
+                <br>
+             <div id="address">
+                <div class="row">
+                   <div class="col-md-6">
+                      <label class="control-label">Street address</label>
+                      <input class="form-control" id="street_number" disabled="true">
+                   </div>
+                   <div class="col-md-6">
+                      <label class="control-label">Route</label>
+                      <input class="form-control" id="route" disabled="true">
+                   </div>
+                </div>
+                <div class="row">
+                   <div class="col-md-6">
+                      <label class="control-label">City</label>
+                      <input class="form-control field" id="locality" disabled="true">
+                   </div>
+                   <div class="col-md-6"> 
+                      <label class="control-label">State</label>
+                      <input class="form-control" id="administrative_area_level_1" disabled="true">
+                   </div>
+                </div>
+                <div class="row">
+                   <div class="col-md-6">
+                      <label class="control-label">Zip code</label>
+                      <input class="form-control" id="postal_code" disabled="true">
+                   </div>
+                   <div class="col-md-6">
+                      <label class="control-label">Country</label>
+                      <input class="form-control" id="country" disabled="true">
+                   </div>
+                </div>
+             </div>
+          </div>
+            </div>
+          </div>  
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnoREE2hdJn4JV1cuy0HQAFUKYrQL6RrU&libraries=places&callback=initAutocomplete" async defer></script>  
     
         <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
         <script
