@@ -79,57 +79,67 @@
           <div class="form-head"> <a href="https://www.luxurionworld.com/"> 👈 Back to Luxurion World</a></div>
             <h2>Vendor Form</h2>
           <p>Please provide us following details...</p>
-        </div>
-        <div class="container">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Address</h3>
-            </div>
-            <div class="panel-body">
-             <input id="autocomplete" placeholder="Enter your address"
-                onFocus="geolocate()" type="text" class="form-control">
-                <br>
-             <div id="address">
-                <div class="row">
-                   <div class="col-md-6">
-                      <label class="control-label">Street address</label>
-                      <input class="form-control" id="street_number" disabled="true">
-                   </div>
-                   <div class="col-md-6">
-                      <label class="control-label">Route</label>
-                      <input class="form-control" id="route" disabled="true">
-                   </div>
-                </div>
-                <div class="row">
-                   <div class="col-md-6">
-                      <label class="control-label">City</label>
-                      <input class="form-control field" id="locality" disabled="true">
-                   </div>
-                   <div class="col-md-6"> 
-                      <label class="control-label">State</label>
-                      <input class="form-control" id="administrative_area_level_1" disabled="true">
-                   </div>
-                </div>
-                <div class="row">
-                   <div class="col-md-6">
-                      <label class="control-label">Zip code</label>
-                      <input class="form-control" id="postal_code" disabled="true">
-                   </div>
-                   <div class="col-md-6">
-                      <label class="control-label">Country</label>
-                      <input class="form-control" id="country" disabled="true">
-                   </div>
-                </div>
-             </div>
-          </div>
-            </div>
-          </div>  
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXothsgC1eE0s7Exxxw1XrsIy32AIjis0&libraries=places&callback=initAutocomplete" async defer></script>  
+        </div> 
 
-      
+        
+          <form>
+            <label>
+              <input type="text" placeholder="Name of Company"/>
+            </label>
+            <label>
+              <input type="text" placeholder="Name of Person"/>
+            </label>
+            <label>
+              <input type="text" placeholder="Vendor Code"/>
+            </label>
+            <label>
+              <input type="tel" placeholder="Contact Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{1}" required/>
+            </label>
+            <label>
+              <input type="tel" placeholder="Alternate Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{1}"/>
+            </label>
+            <label>
+              <input type="email" placeholder="Email Address"/>
+            </label>
+            <label>
+              <input type="text" placeholder="Aadhar Number"/>
+            </label>
+            <label>
+              <input type="text" placeholder="PAN Card Number"/>
+            </label>
+            <label>
+              <input type="text" placeholder="GST Number"/>
+            </label>
+            <label>
+              <input type="number" placeholder="Bank Account Number"/>
+            </label>
+            <label>
+              <input type="text" placeholder="Bank Name"/>
+            </label>
+            <label>
+              <input type="text" placeholder="Bank Branch"/>
+            </label>
+            <label>
+              <input type="address" placeholder="Bank Address"/>
+            </label>
+            <label>
+              <input type="text" placeholder="IFSC Code"/>
+            </label>
+            <label>
+              <input type="text" placeholder=" SWIFT Code"/>
+            </label>
+
+
+            <button class="red" type="button"><i class="icon ion-md-lock"></i> Log in</button>
+
+            
+          </form>
+
+        </form>
 
       </div>
-    </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
   
   </main><!-- End #main -->
