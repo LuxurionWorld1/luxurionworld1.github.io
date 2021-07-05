@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Volunteer Sign up form</title>
+    <title>Luxurion World</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
@@ -14,20 +14,20 @@
           <h1>Vendor Registration Form</h1>
         </div>
         <br/>
-        <p>The HELP Group is seeking volunteers to serve our community. Fill in the information below to indicate how you would like to become involved.</p>
+        <p> Please fill in the informations below.</p>
         <br/>
         <div class="colums">
           <div class="item">
             <label for="name">Name of company<span>*</span></label>
-            <input id="name" type="text" name="name" required/>
+            <input id="company" type="text" name="name" required/>
           </div>
           <div class="item">
             <label for="name">Name of Person<span>*</span></label>
-            <input id="name" type="text" name="name" required/>
+            <input id="person" type="text" name="name" required/>
           </div>
           <div class="item">
             <label for="eaddress">Email Address<span>*</span></label>
-            <input id="eaddress" type="text"   name="eaddress" required/>
+            <input id="email" type="text"   name="eaddress" required/>
           </div>
           <div class="item">
             <label for="phone">Phone Number<span>*</span></label>
@@ -35,47 +35,47 @@
           </div>
           <div class="item">
             <label for="phone">Alternate Phone Number</label>
-            <input id="phone" type="tel"   name="phone" />
+            <input id="aphone" type="tel"   name="phone" />
           </div>
           <div class="item">
             <label for="street">Aadhar Number<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
+            <input id="Aadhar" type="text"   name="street" required/>
           </div>
           <div class="item">
             <label for="street">PAN Card Number<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
+            <input id="PAN" type="text"   name="street" required/>
           </div>
           <div class="item">
             <label for="street">GST Number<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
+            <input id="GST" type="text"   name="street" required/>
+          </div>
+          <div class="item">
+            <label for="street">Bank Account Number<span>*</span></label>
+            <input id="Bank_AC" type="text"   name="street" required/>
+          </div>
+          <div class="item">
+            <label for="street">Bank Name<span>*</span></label>
+            <input id="Bank_N" type="text"   name="street" required/>
+          </div>
+          <div class="item">
+            <label for="street">Bank Branch<span>*</span></label>
+            <input id="Bank_Br" type="text"   name="street" required/>
+          </div>
+          <div class="item">
+            <label for="street">Bank Address<span>*</span></label>
+            <input id="Bank_Ad" type="text"   name="street" required/>
+          </div>
+          <div class="item">
+            <label for="street">Bank IFSC Code<span>*</span></label>
+            <input id="IFSC" type="text"   name="street" required/>
+          </div>
+          <div class="item">
+            <label for="street">SWIFT Number<span>*</span></label>
+            <input id="SWIFT" type="text"   name="street" required/>
           </div>
           <div class="item">
             <label for="city">City<span>*</span></label>
             <input id="city" type="text"   name="city" required/>
-          </div>
-          <div class="item">
-            <label for="street">Bank Account Number<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
-          </div>
-          <div class="item">
-            <label for="street">Bank Name<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
-          </div>
-          <div class="item">
-            <label for="street">Bank Branch<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
-          </div>
-          <div class="item">
-            <label for="street">Bank Address<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
-          </div>
-          <div class="item">
-            <label for="street">Bank IFSC Code<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
-          </div>
-          <div class="item">
-            <label for="street">SWIFT Number<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
           </div>
           <div class="item">
             <label for="state">State<span>*</span></label>
@@ -83,7 +83,7 @@
           </div>
           <div class="item">
             <label for="street">Country<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
+            <input id="country" type="text"   name="street" required/>
           </div>
           <div class="item">
             <label for="zip">Zip<span>*</span></label>
@@ -238,10 +238,88 @@
       </form>
     </div>
 
+
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD9zyhiZU1B1zzl57zA8ewf9kBxZTXdxQY",
+    authDomain: "vendor-form-7540f.firebaseapp.com",
+    projectId: "vendor-form-7540f",
+    storageBucket: "vendor-form-7540f.appspot.com",
+    messagingSenderId: "828433782838",
+    appId: "1:828433782838:web:ba5d2699795b920f9fe097"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+  //Vendor Form Code
+
+
+
+  var company, Person, Email, Phone, Aphone, Aadhar, PAN, GST, 
+  city, Bank_AC, Bank_N, Bank_Br, Bank_Ad, IFSC, SWIFT, State, Country, Zip;
+
+  function Ready(){
+    company = document.getElementById('company').value;
+    Person = document.getElementById('person').value;
+    Email = document.getElementById('email').value;
+    Phone = document.getElementById('phone').value;
+    Aphone = document.getElementById('aphone').value;
+    Aadhar = document.getElementById('Aadhar').value;
+    PAN = document.getElementById('PAN').value;
+    GST = document.getElementById('GST').value;
+    city = document.getElementById('city').value;
+    Bank_AC = document.getElementById('Bank_AC').value;
+    Bank_N = document.getElementById('Bank_N').value;
+    Bank_Br = document.getElementById('Bank_Br').value;
+    Bank_Ad = document.getElementById('Bank_Ad').value;
+    IFSC = document.getElementById('IFSC').value;
+    SWIFT = document.getElementById('SWIFT').value;
+    State = document.getElementById('state').value;
+    Country = document.getElementById('country').value;
+    Zip = document.getElementById('zip').value;
+  }
+
+  // Submit button code
+  document.getElementById('insert').onclick = function(){
+          Ready();
+          firebase.database().ref('Vendor/'+Email).set({
+              NameOfTheCompany: company,
+              NameOfThePerson: Person,
+              EmailAddress: Email,
+              ContactNumber: Phone,
+              AlternativeContact: Aphone,
+              AadharNumber: Aadhar,
+              PANnumber: PAN,
+              GSTnumber: GST,
+              CityName: city,
+              BankAccountNumber: Bank_AC,
+              BankName: Bank_N,
+              BankBranch: Bank_Br,
+              BankAddress: Bank_Ad,
+              IFSCcode: IFSC,
+              SWIFTcode: SWIFT,
+              StateName: State,
+              CountryName: Country,
+              ZipCode: Zip
+          });
+  }
+
+
+
+</script>
+
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
-    <script src="./MainScript.js"></script>
 
 
 
