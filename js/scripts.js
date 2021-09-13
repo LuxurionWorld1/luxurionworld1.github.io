@@ -252,8 +252,4 @@ GoogleMapsDemo.Application = (function () {
         Init: _init
     }
 })();
-
-/* This should ideally be a callback for the async version of the Google Maps script reference.
-   However, Codepen doesn't give enough control over the document to ensure that the Google
-   Maps script tag is placed after the JS code here. */
 GoogleMapsDemo.Application.Init();
