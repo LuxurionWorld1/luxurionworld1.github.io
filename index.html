@@ -78,21 +78,22 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="company">Company</label>
+                        <label for="company">Name of Company</label>
                         <input type="text" class="form-control"  id="company">
                       </div>
               
               
                     </div>
                     <!--  col-md-6   -->
-              
                     <div class="col-md-6">
-              
                       <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" >
+                        <label for="company">Vendor Code</label>
+                        <input type="text" class="form-control"  id="vendorCode">
                       </div>
+              
+              
                     </div>
+                   
                     <!--  col-md-6   -->
                   </div>
                   <!--  row   -->
@@ -102,80 +103,82 @@
                     <div class="col-md-6">
               
                       <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" >
                       </div>
                     </div>
                   
+                    <div class="col-md-6">
+              
+                      <div class="form-group">
+                        <label for="phone">Alternate Phone Number</label>
+                        <input type="tel" class="form-control" id="AlternatePhone" >
+                      </div>
+                    </div>
                   </div>
+                  <div class="row">
+                  <div class="col-md-6">
+              
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                
+                    <div class="form-group city-wrap">
+                      <label for="zip"> Zip</label>
+                      <p class="zip-error">Not a real zip code.</p>
+                      <input type="text" pattern="[0-9]*" maxlength="6" required name="zip" class="form-control" id="zip">
+                    </div>
+                  </div>
+
+                </div>
                   <!--  row   -->
-              </div>
 
-<div class="container-fluid">
-    
-<form class="form-horizontal" role="form">
-    <fieldset class="address">
-        <legend>Address</legend>
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                Address
-            </label>
-            <div class="col-sm-6 col-md-4">
-                <input class="form-control places-autocomplete" type="text" id="Street" name="Street" placeholder="" value="" autocomplete="address-line1">
-            </div>
-        </div>
+                  <div class="row">
 
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                Apt/Suite #
-            </label>
-            <div class="col-sm-6 col-md-4">
-                <input class="form-control" type="text" id="Street2" name="Street2" value="" autocomplete="address-line2">
-            </div>
-        </div>
+                    <div class="col-md-6">
+              
+                      <div class="form-group">
+                        <label for="address-line-1"> Street1</label>
+                        <input type="text" name="address-line-1" class="form-control" id="address-line-1">
+                      </div>
+                    </div>
 
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                Postal/Zip Code
-            </label>
-            <div class="col-sm-2 col-md-2">
-                <input class="form-control places-autocomplete" type="text" id="PostalCode" name="PostalCode" placeholder="" value="" autocomplete="postal-code">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                City
-            </label>
-            <div class="col-sm-4 col-md-3">
-                <input class="form-control" type="text" id="City" name="City" value="" autocomplete="address-level2">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                Country
-            </label>
-            <div class="col-sm-4 col-md-3">
-                <input class="form-control" type="text" id="Country" name="Country" value="" autocomplete="country">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                State/Territory
-            </label>
-            <div class="col-sm-4 col-md-3">
-                <input class="form-control" type="text" id="State" name="State" value="" autocomplete="address-level1">
-            </div>
-        </div>
-    </fieldset>
-</form>
-    
-</div>
+                    <div class="col-md-6">
+                
+                      <div class="form-group">
+                        <label for="address-line-2">Street 2</label>
+                        <input type="text" name="address-line-2" class="form-control" id="address-line-2">
+                      </div>
+                    </div>
+  
+                   
+                  </div>
 
 
+                  <div class="row">
+
+                    <div class="col-md-6">
+                
+                      <div class="form-group city-wrap">
+                        <label for="city"> City</label>
+                        <input type="text" name="city" class="form-control" id="city">
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                
+                      <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" name="state" class="form-control" id="state">
+                      </div>
+                    </div>
+                  </div>
           </div>
+          <input class="btn btn-primary" type="submit" value="Submit">
         </div>
       </div>
     </section>

@@ -11390,7 +11390,112 @@ Form starts from here
 */
 
 
+.fancy-form {
+  background: #f7f7f7;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 0px 1px white;
+  border: 1px solid #B2B2B2;
+}
 
-.pac-container {
-  min-width: 20em;
+.fancy-form input {
+  transition: all 0.3s ease-out;
+}
+
+.fancy-form input[type=text] {
+  outline: none;
+  border: 1px solid #cccccc;
+  box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 0px 0px white, inset 0px 1px 6px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  padding: 7px 10px;
+  background: #f1f1f1;
+  color: #b5b5b5;
+  margin-bottom: 4px;
+}
+
+.fancy-form input[type=text]:hover {
+  background: #f7f7f7;
+}
+
+.fancy-form input[type=text]:focus {
+  box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 5px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-color: transparent;
+  color: #565656;
+}
+
+.fancy-form fieldset {
+  border: none;
+  padding: 25px 10px 10px 10px;
+}
+
+.fancy-form legend {
+  font: 26px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px #fff;
+  color: #1b6d8e;
+  padding: 0 5px;
+}
+
+.fancy-form label {
+  display: block;
+  font: 14px Arial, Helvetica, sans-serif;
+  padding-left: 10px;
+  letter-spacing: 1px;
+  padding-left: 10px;
+  color: #1b6d8e;
+  opacity: 0.8;
+}
+
+.fancy-form input:focus + label {
+  opacity: 1;
+}
+
+.fancy-form input:not([type=submit]) {
+  width: 100%;
+  display: block;
+}
+
+.submit-wrap {
+  display: none;
+}
+
+.fancy-form div {
+  margin: 0 0 6px 0;
+  clear: both;
+}
+
+.fancy-form div > div {
+  padding: 4px;
+}
+
+.fancy-form .city-wrap {
+  width: 69%;
+  margin-right: 1%;
+}
+
+.fancy-form .state-wrap {
+  width: 9%;
+  margin-right: 1%;
+}
+
+.fancy-form .zip-wrap {
+  width: 20%;
+  display: block !important;
+}
+
+.zip-error {
+  color: #d70000;
+  font: 12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border-top: 2px dotted #ec9696;
+  border-bottom: 2px dotted #ec9696;
+  text-align: center;
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: none;
+}
+
+
+.btn{
+  margin-top: 10px;
 }
