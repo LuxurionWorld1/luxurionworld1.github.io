@@ -32,7 +32,7 @@
       type="text/css"
     />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
   </head>
   <body id="page-top">
     <!-- Header-->
@@ -55,7 +55,7 @@
               Please fill the following details
             </p>
             <div class="container">
-                <form>
+                <form id="vendorForm">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -133,7 +133,6 @@
                       <input type="text" pattern="[0-9]*" maxlength="6" required name="zip" class="form-control" id="zip">
                     </div>
                   </div>
-
                 </div>
                   <!--  row   -->
 
@@ -143,7 +142,7 @@
               
                       <div class="form-group">
                         <label for="address-line-1"> Street1</label>
-                        <input type="text" name="address-line-1" class="form-control" id="address-line-1">
+                        <input type="text" name="addressLine" class="form-control" id="address-line-1">
                       </div>
                     </div>
 
@@ -242,7 +241,7 @@
                 
                       <div class="form-group city-wrap">
                         <label for="baddress"> Bank Address</label>
-                        <input type="text" name="baddress" class="form-control" id=baddress">
+                        <input type="text" name="baddress" class="form-control" id="baddress">
                       </div>
                     </div>
 
@@ -261,7 +260,7 @@
                 
                       <div class="form-group city-wrap">
                         <label for="swift"> SWIFT Code</label>
-                        <input type="text" name="swift" class="form-control" id=swift">
+                        <input type="text" name="swift" class="form-control" id="swift">
                       </div>
                     </div>
                   </div>
@@ -270,7 +269,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="saree" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Saree
                         </label>
@@ -281,7 +280,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="Dupatta" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Dupatta
                         </label>
@@ -292,7 +291,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="Fabric" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Fabric
                         </label>
@@ -303,7 +302,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="Suit" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Suit
                         </label>
@@ -315,7 +314,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="Lehenga" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Lehenga
                         </label>
@@ -326,7 +325,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="Blouse" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Blouse
                         </label>
@@ -337,7 +336,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="Kurti" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Kurti
                         </label>
@@ -348,7 +347,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="Stole" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Stole
                         </label>
@@ -359,7 +358,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="Lace" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Lace
                         </label>
@@ -370,7 +369,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="Jewelery" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                           Jewelery
                         </label>
@@ -385,7 +384,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Banarasi" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Banarasi
                       </label>
@@ -396,7 +395,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Bandhani" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Bandhani
                       </label>
@@ -407,7 +406,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Chanderi" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Chanderi
                       </label>
@@ -418,7 +417,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Kanjeevaram" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Kanjeevaram
                       </label>
@@ -430,7 +429,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Kantha" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Kantha
                       </label>
@@ -441,7 +440,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Ikat" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Ikat
                       </label>
@@ -452,7 +451,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Patola" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Patola
                       </label>
@@ -463,7 +462,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Paithani" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Paithani
                       </label>
@@ -474,7 +473,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Parsi Work" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Parsi Work
                       </label>
@@ -485,7 +484,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Bhagalpur" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Bhagalpur
                       </label>
@@ -496,7 +495,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Linen" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Linen
                       </label>
@@ -507,7 +506,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Trendy" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Trendy
                       </label>
@@ -518,7 +517,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Batik" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Batik
                       </label>
@@ -529,7 +528,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Kashmiri" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Kashmiri
                       </label>
@@ -541,7 +540,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Chikankari" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Chikankari
                       </label>
@@ -552,7 +551,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Digital" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Digital
                       </label>
@@ -563,7 +562,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Kalamkari" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Kalamkari
                       </label>
@@ -574,7 +573,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Phulkari" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Phulkari
                       </label>
@@ -585,7 +584,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Gotaptti" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Gotaptti
                       </label>
@@ -596,18 +595,25 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <input class="form-check-input" type="checkbox" value="Madhubani" id="flexCheckChecked">
                       <label class="form-check-label" for="flexCheckChecked">
                         Madhubani
                       </label>
                     </div>
                   </div>
                 </div>
+                
+                <div class="alert">Your message has been sent</div>
+        <form id="contactForm">
+          
+                <div>                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
 
               </div>
-
+            </form>
           </div>
-          <input class="btn btn-primary" type="submit" value="Submit">
+          
         </div>
       </div>
     </section>
@@ -658,12 +664,14 @@
       </div>
     </footer>
         <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+        <script src="./js/scripts.js"></script>
+
         <!-- Google Map API-->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDan_TiNLra22HBoL0awWH3TOlc-XJDzTg&libraries=places"></script>
         <!--Google Map API-->
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
   </body>
 </html>

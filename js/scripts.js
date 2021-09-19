@@ -3,53 +3,19 @@
 * Copyright 2013-2021 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
 */
-window.addEventListener('DOMContentLoaded', event => {
 
-    const sidebarWrapper = document.getElementById('sidebar-wrapper');
-    let scrollToTopVisible = false;
-   
-
-   
-
-    // Scroll to top button appear
-    document.addEventListener('scroll', () => {
-        const scrollToTop = document.body.querySelector('.scroll-to-top');
-        if (document.documentElement.scrollTop > 100) {
-            if (!scrollToTopVisible) {
-                fadeIn(scrollToTop);
-                scrollToTopVisible = true;
-            }
-        } else {
-            if (scrollToTopVisible) {
-                fadeOut(scrollToTop);
-                scrollToTopVisible = false;
-            }
-        }
-    })
-})
-
-function fadeOut(el) {
-    el.style.opacity = 1;
-    (function fade() {
-        if ((el.style.opacity -= .1) < 0) {
-            el.style.display = "none";
-        } else {
-            requestAnimationFrame(fade);
-        }
-    })();
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBCYuxugiG_aMUkqkYXvQ3kmfJAeOdZYXI",
+  authDomain: "vendor-form-48fd1.firebaseapp.com",
+  databaseURL: "https://vendor-form-48fd1-default-rtdb.firebaseio.com/",
+  projectId: "vendor-form-48fd1",
+  storageBucket: "vendor-form-48fd1.appspot.com",
+  messagingSenderId: "G-KM8BYNSHEY"
 };
-
-function fadeIn(el, display) {
-    el.style.opacity = 0;
-    el.style.display = display || "block";
-    (function fade() {
-        var val = parseFloat(el.style.opacity);
-        if (!((val += .1) > 1)) {
-            el.style.opacity = val;
-            requestAnimationFrame(fade);
-        }
-    })();
-};
+firebase.initializeApp(config);
+// Reference messages collection
+var messagesRef = firebase.database().ref('messages');
 
 // Map Auto fill JS code
 
@@ -106,3 +72,87 @@ function is_int(value) {
     };
   
   });
+
+  // Firebase code starts from here
+var e = document.getElementById("vendorForm").addEventListener('submit',submitForm);
+
+function submitForm(e){
+  e.preventDefault();
+// get vlaues 
+
+  var firstName = getInputVal('first');
+  var lastName = getInputVal('last');
+  var company = getInputVal('company');
+  var vendorCode = getInputVal('vendorCode');
+  var phone = getInputVal('phone');
+  var AlternatePhone = getInputVal('AlternatePhone');
+  var email = getInputVal('email');
+  var zip = getInputVal('zip');
+  var street1 = getInputVal('addressLine');
+  var street2 = getInputVal('address-line-2');
+  var city = getInputVal('city');
+  var state = getInputVal('state');
+  var aadharNumber = getInputVal('aadhar-no');
+  var panCard = getInputVal('PanCard');
+  var gstNumber = getInputVal('gst');
+  var bankAccountNumber = getInputVal('bankac');
+  var bankName = getInputVal('bname');
+  var bankBranch = getInputVal('bbranch');
+  var bankAddress = getInputVal('baddress');
+  var IFSC = getInputVal('ifsc');
+  var swiftCode = getInputVal('swift');
+  //var categoryAndArtform = document.querySelector('.flexCheckChecked:checked').value;
+
+
+
+// save message 
+
+saveMessage(first,last,company,vendorCode,phone,AlternatePhone,email,zip, addressLine,street2,city,state,aadharNumber,panCard,gstNumber,bankAccountNumber,bankAddress,bankName,bankBranch,IFSC,swiftCode,categoryAndArtform);
+
+// show alert
+
+document.querySelector('.alert').style.display = 'block';
+
+// Hide alert after 3 seconds 
+setTimeout(function(){
+  document.querySelector('.alert').style.display = 'none';
+},3000);
+
+// Clear form
+document.getElementById('vendorForm').reset();
+
+
+// function to get form values
+
+function getInputVal(id){
+  //return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveMessage(firstName,lastName,company,vendorCode,phone,AlternatePhone,email,zip,street1,street2,city,state,aadharNumber,panCard,gstNumber,bankAccountNumber,bankAddress,bankName,bankBranch,IFSC,swiftCode,categoryAndArtform){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    first:firstName,
+    lastName: lastName,
+    company:company,
+    vendorCode:vendorCode,
+    phone:phone,
+    AlternatePhone:AlternatePhone,
+    email:email,
+    zip:zip,
+    street1:street1,
+    street2:street2,
+    city:city,
+    state:state,
+    aadharNumber:aadharNumber,
+    panCard:panCard,
+    gstNumber:gstNumber,
+    bankAccountNumber:bankAccountNumber,
+    bankAddress:bankAddress,
+    bankName:bankName,
+    bankBranch:bankBranch,
+    IFSC:IFSC,
+    swiftCode:swiftCode,
+    categoryAndArtform:categoryAndArtform
+  });
+}}

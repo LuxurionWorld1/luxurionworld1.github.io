@@ -11496,8 +11496,10 @@ Form starts from here
 }
 
 
-.btn{
+.btn, .btn-primary{
   margin-top: 10px;
+  max-width: 300px;
+  align: center;
 }
 .cat, .Odetails{
   margin-top: 10px;
