@@ -90,12 +90,12 @@
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyCIPqGAI0WT0_kji4ApkuIfqvAptKOfHrU",
-  authDomain: "blouse-size-chart.firebaseapp.com",
-  databaseURL: "https://blouse-size-chart-default-rtdb.firebaseio.com",
-  projectId: "blouse-size-chart",
-  storageBucket: "blouse-size-chart.appspot.com",
-  messagingSenderId: "159134797152"
+  apiKey: "AIzaSyD9YEmbXyoQFCpcd_xtx3yCErvHQqzxxZQ",
+  authDomain: "lehenga-size-chart-45541.firebaseapp.com",
+  databaseURL: "https://lehenga-size-chart-45541-default-rtdb.firebaseio.com",
+  projectId: "lehenga-size-chart-45541",
+  storageBucket: "lehenga-size-chart-45541.appspot.com",
+  messagingSenderId: "1067458518244"
 };
 firebase.initializeApp(config);
 // Reference messages collection
@@ -104,7 +104,7 @@ var messagesRef = firebase.database().ref('messages');
 
 
   // Firebase code starts from here
-var e = document.getElementById("vendorForm").addEventListener('submit',submitForm);
+var e = document.getElementById("sizeChart").addEventListener('submit',submitForm);
 
 function submitForm(e){
   e.preventDefault();
@@ -126,6 +126,9 @@ function submitForm(e){
   var chooseOne = getInputVal('padding');
   var blouseOpening = getInputVal('blouseOpening');
   var comment = getInputVal('comment');
+  var lehengaLength = getInputVal('lehengaLength');
+  var lehengaWaist = getInputVal('lehengaWaist');
+  var lehengaHips = getInputVal('lehengaHips');
 
 
 
@@ -146,7 +149,7 @@ function submitForm(e){
 
 // save message 
 
-saveMessage(sizeUnit,title,shoulder,shoulderFullLength,frontNeckDepth,chestAround,email,waistAround, backNeckDepth,blouseLength,sleeveAround,sleeveLength,armhole,chooseOne,blouseOpening,comment,datetime
+saveMessage(sizeUnit,title,shoulder,shoulderFullLength,frontNeckDepth,chestAround,email,waistAround, backNeckDepth,blouseLength,sleeveAround,sleeveLength,armhole,chooseOne,blouseOpening,comment,datetime,lehengaLength,lehengaWaist,lehengaHips
   );
 
 // show alert
@@ -161,7 +164,7 @@ setTimeout(function(){
 },3000);
 
 // Clear form
-document.getElementById('vendorForm').reset();
+document.getElementById('sizeChart').reset();
 
 
 // function to get form values
@@ -171,7 +174,7 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage(sizeUnit,title,shoulder,shoulderFullLength,frontNeckDepth,chestAround,email,waistAround, backNeckDepth,blouseLength,sleeveAround,sleeveLength,armhole,chooseOne,blouseOpening,comment,datetime){
+function saveMessage(sizeUnit,title,shoulder,shoulderFullLength,frontNeckDepth,chestAround,email,waistAround, backNeckDepth,blouseLength,sleeveAround,sleeveLength,armhole,chooseOne,blouseOpening,comment,datetime, lehengaWaist,lehengaLength,lehengaHips){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     datetime:datetime,
@@ -190,7 +193,21 @@ function saveMessage(sizeUnit,title,shoulder,shoulderFullLength,frontNeckDepth,c
     armhole: armhole,
     chooseOne: chooseOne,
     blouseOpening: blouseOpening,
-    comment:comment
+    comment:comment,
+    lehengaHips:lehengaHips,
+    lehengaLength:lehengaLength,
+    lehengaWaist: lehengaWaist
   });
 }}
 
+//Hide blouse measurement if already filled for saree product
+
+  $(function () {
+    $(".chkfilled").click(function () {
+        if ($(this).is(":checked")) {
+            $(".blouse").hide();
+        } else {
+            $(".blouse").show();
+        }
+    });
+});

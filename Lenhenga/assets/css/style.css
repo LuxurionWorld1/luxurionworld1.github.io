@@ -185,6 +185,16 @@ Form starts from here
 }
 .cat, .Odetails{
   margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.already-filled{
+  padding-bottom: 40px;
+}
+
+.top-details{
+  display: flexbox;
 }
 
 /*
@@ -300,3 +310,6 @@ Alert
   display: table;
 }
 
+.info{
+  padding-top: 10px;
+}
