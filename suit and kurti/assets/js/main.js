@@ -90,12 +90,12 @@
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyCIPqGAI0WT0_kji4ApkuIfqvAptKOfHrU",
-  authDomain: "blouse-size-chart.firebaseapp.com",
-  databaseURL: "https://blouse-size-chart-default-rtdb.firebaseio.com",
-  projectId: "blouse-size-chart",
-  storageBucket: "blouse-size-chart.appspot.com",
-  messagingSenderId: "159134797152"
+  apiKey: "AIzaSyCVlSxusHfWkTaAn2Je0zpdJNVAFGmQhxs",
+  authDomain: "suit-and-kurti-size-char-28976.firebaseapp.com",
+  databaseURL: "https://suit-and-kurti-size-char-28976-default-rtdb.firebaseio.com",
+  projectId: "suit-and-kurti-size-char-28976",
+  storageBucket: "suit-and-kurti-size-char-28976.appspot.com",
+  messagingSenderId: "1012226878106"
 };
 firebase.initializeApp(config);
 // Reference messages collection
@@ -113,20 +113,25 @@ function submitForm(e){
   var sizeUnit = getInputVal('sizeUnit');
   var email = getInputVal('email');
   var title = getInputVal('title');
+  var length = getInputVal('length');
+  var upperChest = getInputVal('upperChest');
+  var chest = getInputVal('chest');
+  var aboveNavel = getInputVal('aboveNavel');
   var shoulder = getInputVal('shoulder');
-  var shoulderFullLength = getInputVal('shoulderFL');
-  var frontNeckDepth = getInputVal('frontNeckDepth');
-  var chestAround = getInputVal('chestAround');
-  var waistAround = getInputVal('waistAround');
-  var backNeckDepth = getInputVal('backNeckDepth');
-  var blouseLength = getInputVal('blouseLength');
+  var frontNeck = getInputVal('frontNeck');
+  var backNeck = getInputVal('backNeck');
   var sleeveLength = getInputVal('sleeveLength');
   var sleeveAround = getInputVal('sleeveAround');
   var armhole = getInputVal('armhole');
-  var chooseOne = getInputVal('padding');
-  var blouseOpening = getInputVal('blouseOpening');
-  var comment = getInputVal('comment');
-
+  var hip = getInputVal('hip');
+  var waist = getInputVal('waist');
+  var waistToAnkle = getInputVal('waistToAnkle');
+  var thighs = getInputVal("thighs");
+  var knee = getInputVal("knee");
+  var calf = getInputVal("calf");
+  var ankle = getInputVal("ankle");
+  var bottomType = getInputVal("bottomType");
+  var comment = getInputVal("comment")
 
 
  
@@ -146,7 +151,7 @@ function submitForm(e){
 
 // save message 
 
-saveMessage(sizeUnit,title,shoulder,shoulderFullLength,frontNeckDepth,chestAround,email,waistAround, backNeckDepth,blouseLength,sleeveAround,sleeveLength,armhole,chooseOne,blouseOpening,comment,datetime
+saveMessage(sizeUnit, email, title, length, upperChest, chest, aboveNavel, shoulder, frontNeck, backNeck, sleeveLength, sleeveAround, armhole, hip, waist, waistToAnkle, thighs, knee, calf, ankle, bottomType, comment,datetime
   );
 
 // show alert
@@ -171,26 +176,32 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage(sizeUnit,title,shoulder,shoulderFullLength,frontNeckDepth,chestAround,email,waistAround, backNeckDepth,blouseLength,sleeveAround,sleeveLength,armhole,chooseOne,blouseOpening,comment,datetime){
+function saveMessage(sizeUnit, email, title, length, upperChest, chest, aboveNavel, shoulder, frontNeck, backNeck, sleeveLength, sleeveAround, armhole, hip, waist, waistToAnkle, thighs, knee, calf, ankle, bottomType, comment,datetime){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
-    datetime:datetime,
-    sizeUnit:sizeUnit,
-    title:title,
-    shoulder:shoulder,
-    shoulderFullLength:shoulderFullLength,
-    frontNeckDepth:frontNeckDepth,
-    chestAround:chestAround,
-    email:email,
-    waistAround: waistAround, 
-    backNeckDepth: backNeckDepth,
-    blouseLength: blouseLength,
-    sleeveAround: sleeveAround,
-    sleeveLength: sleeveLength,
-    armhole: armhole,
-    chooseOne: chooseOne,
-    blouseOpening: blouseOpening,
-    comment:comment
+  sizeUnit: sizeUnit,
+  email: email,
+  title: title,
+  length: length,
+  upperChest: upperChest,
+  chest: chest,
+  aboveNavel: aboveNavel,
+  shoulder: shoulder,
+  frontNeck: frontNeck,
+  backNeck: backNeck,
+  sleeveLength: sleeveLength,
+  sleeveAround: sleeveAround,
+  armhole: armhole,
+  hip: hip,
+  waist: waist,
+  waistToAnkle: waistToAnkle,
+  thighs: thighs,
+  knee: knee,
+  calf: calf,
+  ankle: ankle, 
+  bottomType: bottomType, 
+  comment: comment,
+  datetime:datetime
   });
 }}
 
